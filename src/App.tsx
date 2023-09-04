@@ -1,6 +1,5 @@
-import React from "react";
-import logo from "./bunlarlogo.png";
-import "./App.css";
+import logo from "./assets/bunlarlogo.png";
+import "./assets/App.css";
 
 function App() {
   return (
