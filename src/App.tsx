@@ -1,14 +1,13 @@
-import logo from "./assets/bunlarlogo.png";
-import "./assets/App.css";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./themes/defaultTheme";
+
+import DefaultLayout from "./layouts/defaultLayout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="logo" />
-        <p>Özgürlük, Adalet, Eşitlik</p>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <DefaultLayout />
+    </ThemeProvider>
   );
 }
 
