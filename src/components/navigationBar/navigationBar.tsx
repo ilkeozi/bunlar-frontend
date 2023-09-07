@@ -1,16 +1,14 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import bunlarlogo from "../../assets/bunlar-logo-50h.png";
 
-export default function ButtonAppBar() {
+export default function NavigationBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Bunlar.org
-          </Typography>
+          <img src={bunlarlogo} alt="bunlar.org" />
         </Toolbar>
       </AppBar>
     </Box>
