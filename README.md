@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Technologies Used
+
+- [Next.js 13](https://nextjs.org/docs/getting-started)
+- [NextUI](https://nextui.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Tailwind Variants](https://tailwind-variants.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Framer Motion](https://www.framer.com/motion)
+- [next-themes](https://github.com/pacocoursey/next-themes)
+
 ## Available Scripts
 
 In the project directory, you can run:
