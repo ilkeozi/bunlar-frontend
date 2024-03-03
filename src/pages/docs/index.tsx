@@ -1,28 +1,7 @@
-import { Link } from "@nextui-org/link";
 import { title, subtitle } from "../../components/primitives";
 import DefaultLayout from "@/layouts/default";
-import {
-  Avatar,
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Divider,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownSection,
-  DropdownTrigger,
-  Progress,
-  cn,
-} from "@nextui-org/react";
-import {
-  AddNoteIcon,
-  CopyDocumentIcon,
-  DeleteDocumentIcon,
-  EditDocumentIcon,
-} from "@/components/icons";
+
+import { Claim } from "@/components/claim";
 
 export default function DocsPage() {
   const iconClasses =
@@ -42,117 +21,35 @@ export default function DocsPage() {
           </h4>
         </div>
       </section>
-      <Card>
-        <CardHeader className="justify-between">
-          <Progress
-            size="sm"
-            radius="sm"
-            classNames={{
-              base: "w-32 ",
-              track: "drop-shadow-md border border-default",
-              indicator: "bg-gradient-to-r from-pink-500 to-yellow-500",
-              value: "text-foreground/60",
-            }}
-            label="Veracity"
-            value={5}
-            maxValue={10}
-            showValueLabel={true}
+      <Claim
+        veracity={5}
+        text={"The use of AI in programming should be welcomed."}
+      />
+
+      <section className="grid grid-cols-2 gap-4 py-8 justify-between ">
+        <div className="flex flex-col gap-4">
+          <Claim
+            veracity={2}
+            text={
+              "AI represents a threat to the foundational principles of democracy."
+            }
           />
-          <Dropdown backdrop="blur">
-            <DropdownTrigger>
-              <Button variant="bordered">Open Menu</Button>
-            </DropdownTrigger>
-            <DropdownMenu
-              variant="faded"
-              aria-label="Dropdown menu with description"
-            >
-              <DropdownSection title="Actions" showDivider>
-                <DropdownItem
-                  key="new"
-                  shortcut="⌘N"
-                  description="Create a new claim"
-                  startContent={<AddNoteIcon className={iconClasses} />}
-                >
-                  New claim
-                </DropdownItem>
-                <DropdownItem
-                  key="copy"
-                  shortcut="⌘C"
-                  description="Copy the claim link"
-                  startContent={<CopyDocumentIcon className={iconClasses} />}
-                >
-                  Copy link
-                </DropdownItem>
-                <DropdownItem
-                  key="edit"
-                  shortcut="⌘⇧E"
-                  description="Allows you to edit the claim"
-                  startContent={<EditDocumentIcon className={iconClasses} />}
-                >
-                  Edit claim
-                </DropdownItem>
-              </DropdownSection>
-              <DropdownSection title="Danger zone">
-                <DropdownItem
-                  key="delete"
-                  className="text-danger"
-                  color="danger"
-                  shortcut="⌘⇧D"
-                  description="Permanently delete the claim"
-                  startContent={
-                    <DeleteDocumentIcon
-                      className={cn(iconClasses, "text-danger")}
-                    />
-                  }
-                >
-                  Delete claim
-                </DropdownItem>
-              </DropdownSection>
-            </DropdownMenu>
-          </Dropdown>
-        </CardHeader>
-        <Divider />
-        <CardBody>
-          <h2>The use of AI in programming should be welcomed.</h2>
-        </CardBody>
-        <Divider />
-        <CardFooter className="justify-between">
-          <div className="flex gap-5">
-            <Avatar
-              isBordered
-              radius="full"
-              size="md"
-              src="https://avatars.githubusercontent.com/u/64313281?v=4"
-            />
-            <div className="flex flex-col gap-1 items-start justify-center">
-              <h4 className="text-small font-semibold leading-none text-default-600">
-                İlker Özin
-              </h4>
-              <h5 className="text-small tracking-tight text-default-400">
-                @ilkeozi
-              </h5>
-            </div>
-            <Button
-              className={""}
-              color="primary"
-              radius="full"
-              size="sm"
-              variant={"solid"}
-            >
-              Follow
-            </Button>
-          </div>
-          <Button
-            className={""}
-            color="primary"
-            radius="full"
-            size="sm"
-            variant={"solid"}
-          >
-            Follow
-          </Button>
-        </CardFooter>
-      </Card>
+          <Claim
+            veracity={1}
+            text={
+              "AI has the potential to erode social trust and cause social strife in society."
+            }
+          />
+        </div>
+        <div className="relative ">
+          <Claim
+            veracity={3}
+            text={
+              "AI can enhance the efficiency and transparency of the political decision making process."
+            }
+          />
+        </div>
+      </section>
     </DefaultLayout>
   );
 }
