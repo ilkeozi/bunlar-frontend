@@ -6,8 +6,26 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "../components/primitives";
 import { GithubIcon } from "../components/icons";
 import DefaultLayout from "@/layouts/default";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
-export default function IndexPage() {
+type Article = {
+  title: string;
+  content: string;
+};
+
+export const getStaticProps = (async (context) => {
+  const res = await fetch("https://api-test.bunlar.org/articles");
+  const staticProps = await res.json();
+  return {
+    props: {
+      staticProps,
+    },
+  };
+}) satisfies GetStaticProps<{ staticProps: Article[] }>;
+
+export default function IndexPage({
+  staticProps,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -19,7 +37,7 @@ export default function IndexPage() {
             websites regardless of your design experience.
           </h1>
           <h4 className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
+            <div key={staticProps[0].title}>{staticProps[0].title}</div>
           </h4>
         </div>
 
