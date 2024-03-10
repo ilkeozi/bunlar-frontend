@@ -31,18 +31,59 @@ export default function IndexPage({
     <DefaultLayout>
       <section className="flex flex-col mx-auto max-w-7xl items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block  text-center justify-center">
-          <h1 className={title()}>Make&nbsp;</h1>
-          <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+          <h1 className={title()}>Explore&nbsp;</h1>
+          <h1 className={title({ color: "violet" })}>debates&nbsp;</h1>
           <h1 className={title()}>
-            websites regardless of your design experience.
+            and participate in structured discussions.
           </h1>
           <h4 className={subtitle({ class: "mt-4" })}>
-            <div key={staticProps[0].title}>{staticProps[0].title}</div>
+            <div key={staticProps[0].title}>Is {staticProps[0].title} </div>
           </h4>
         </div>
         <div className="flex gap-4">
           <Link
             isExternal
+            className={buttonStyles({ variant: "bordered", radius: "full" })}
+            href={siteConfig.links.github}
+          >
+            Politics
+          </Link>
+          <Link
+            isExternal
+            className={buttonStyles({ variant: "bordered", radius: "full" })}
+            href={siteConfig.links.github}
+          >
+            Philosophy
+          </Link>
+          <Link
+            isExternal
+            className={buttonStyles({ variant: "bordered", radius: "full" })}
+            href={siteConfig.links.github}
+          >
+            Science
+          </Link>
+          <Link
+            isExternal
+            className={buttonStyles({ variant: "bordered", radius: "full" })}
+            href={siteConfig.links.github}
+          >
+            Ethics
+          </Link>
+          <Link
+            isExternal
+            className={buttonStyles({ variant: "bordered", radius: "full" })}
+            href={siteConfig.links.github}
+          >
+            Technology
+          </Link>
+          <Link
+            isExternal
+            className={buttonStyles({ variant: "bordered", radius: "full" })}
+            href={siteConfig.links.github}
+          >
+            Education
+          </Link>
+          <Link
             href={siteConfig.links.docs}
             className={buttonStyles({
               color: "primary",
@@ -50,25 +91,8 @@ export default function IndexPage({
               variant: "shadow",
             })}
           >
-            Documentation
+            See More
           </Link>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
-        </div>
-
-        <div className="mt-8">
-          <Snippet hideSymbol hideCopyButton variant="bordered">
-            <span>
-              Get started by editing{" "}
-              <Code color="primary">pages/index.tsx</Code>
-            </span>
-          </Snippet>
         </div>
       </section>
       <section className="py-8">
