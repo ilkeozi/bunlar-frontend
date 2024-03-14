@@ -1,10 +1,7 @@
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "../components/primitives";
-import { GithubIcon } from "../components/icons";
 import DefaultLayout from "@/layouts/default";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { FooterList } from "@/components/footer-list";
@@ -29,8 +26,8 @@ export default function IndexPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <DefaultLayout>
-      <section className="flex flex-col mx-auto max-w-7xl items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block  text-center justify-center">
+      <section className="container mx-auto gap-4 py-8 md:py-10 text-center">
+        <div className="inline-block  text-center ">
           <h1 className={title()}>Explore&nbsp;</h1>
           <h1 className={title({ color: "violet" })}>debates&nbsp;</h1>
           <h1 className={title()}>
@@ -40,7 +37,7 @@ export default function IndexPage({
             <div key={staticProps[0].title}>Is {staticProps[0].title} </div>
           </h4>
         </div>
-        <div className="flex gap-4">
+        <div className="container mx-auto flex flex-wrap gap-4 py-8 justify-center">
           <Link
             isExternal
             className={buttonStyles({ variant: "bordered", radius: "full" })}
@@ -95,9 +92,10 @@ export default function IndexPage({
           </Link>
         </div>
       </section>
+
       <section className="py-8">
         <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-          <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="md:grid md:grid-cols-2 md:gap-8 ">
             <FooterList />
             <FooterList />
           </div>
