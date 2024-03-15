@@ -245,7 +245,7 @@ export const LoginIcon: React.FC<IconSvgProps> = (props) => (
       stroke-width="1.5"
     >
       <path
-        stroke-linejoin="round"
+        strokeLinejoin="round"
         d="M2.001 11.999h14m0 0l-3.5-3m3.5 3l-3.5 3"
       />
       <path d="M9.002 7c.012-2.175.109-3.353.877-4.121C10.758 2 12.172 2 15 2h1c2.829 0 4.243 0 5.122.879C22 3.757 22 5.172 22 8v8c0 2.828 0 4.243-.878 5.121C20.242 22 18.829 22 16 22h-1c-2.828 0-4.242 0-5.121-.879c-.768-.768-.865-1.946-.877-4.121" />
@@ -313,7 +313,7 @@ export const BunlarLogo: React.FC<IconSvgProps> = (props) => (
       fill="none"
       stroke="currentColor"
       stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       stroke-width="1.5"
     >
       <path d="M9.533 11.15A1.823 1.823 0 0 0 9 12.438V15h2.578c.483 0 .947-.192 1.289-.534l7.6-7.604a1.822 1.822 0 0 0 0-2.577l-.751-.751a1.822 1.822 0 0 0-2.578 0z" />
