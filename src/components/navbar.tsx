@@ -23,9 +23,9 @@ import {
   TwitterIcon,
   GithubIcon,
   DiscordIcon,
-  HeartFilledIcon,
   SearchIcon,
-  EditDocumentIcon,
+  LoginIcon,
+  BunlarLogo,
 } from "./icons";
 
 export const Navbar = () => {
@@ -55,7 +55,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <EditDocumentIcon />
+            <BunlarLogo />
             <p className="font-bold text-inherit">BUNLAR</p>
           </NextLink>
         </NavbarBrand>
@@ -96,14 +96,13 @@ export const Navbar = () => {
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
-            isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
             href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
+            startContent={<LoginIcon />}
             variant="flat"
           >
-            Sponsor
+            Login
           </Button>
         </NavbarItem>
       </NavbarContent>

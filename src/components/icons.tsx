@@ -235,6 +235,23 @@ export const AddNoteIcon: React.FC<IconSvgProps> = (props) => (
     />
   </svg>
 );
+
+export const LoginIcon: React.FC<IconSvgProps> = (props) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-width="1.5"
+    >
+      <path
+        strokeLinejoin="round"
+        d="M2.001 11.999h14m0 0l-3.5-3m3.5 3l-3.5 3"
+      />
+      <path d="M9.002 7c.012-2.175.109-3.353.877-4.121C10.758 2 12.172 2 15 2h1c2.829 0 4.243 0 5.122.879C22 3.757 22 5.172 22 8v8c0 2.828 0 4.243-.878 5.121C20.242 22 18.829 22 16 22h-1c-2.828 0-4.242 0-5.121-.879c-.768-.768-.865-1.946-.877-4.121" />
+    </g>
+  </svg>
+);
 export const CopyDocumentIcon: React.FC<IconSvgProps> = (props) => (
   <svg
     aria-hidden="true"
@@ -267,10 +284,10 @@ export const EditDocumentIcon: React.FC<IconSvgProps> = (props) => (
     aria-hidden="true"
     fill="none"
     focusable="false"
-    height="1em"
+    height="24"
     role="presentation"
     viewBox="0 0 24 24"
-    width="1em"
+    width="24"
     {...props}
   >
     <path
@@ -282,6 +299,26 @@ export const EditDocumentIcon: React.FC<IconSvgProps> = (props) => (
       d="M21.02 2.98c-1.79-1.8-3.54-1.84-5.38 0L14.51 4.1c-.1.1-.13.24-.09.37.7 2.45 2.66 4.41 5.11 5.11.03.01.08.01.11.01.1 0 .2-.04.27-.11l1.11-1.12c.91-.91 1.36-1.78 1.36-2.67 0-.9-.45-1.79-1.36-2.71ZM17.86 10.42c-.27-.13-.53-.26-.77-.41-.2-.12-.4-.25-.59-.39-.16-.1-.34-.25-.52-.4-.02-.01-.08-.06-.16-.14-.31-.25-.64-.59-.95-.96-.02-.02-.08-.08-.13-.17-.1-.11-.25-.3-.38-.51-.11-.14-.24-.34-.36-.55-.15-.25-.28-.5-.4-.76-.13-.28-.23-.54-.32-.79L7.9 10.72c-.35.35-.69 1.01-.76 1.5l-.43 2.98c-.09.63.08 1.22.47 1.61.33.33.78.5 1.28.5.11 0 .22-.01.33-.02l2.97-.42c.49-.07 1.15-.4 1.5-.76l5.38-5.38c-.25-.08-.5-.19-.78-.31Z"
       fill="currentColor"
     />
+  </svg>
+);
+
+export const BunlarLogo: React.FC<IconSvgProps> = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+      stroke-width="1.5"
+    >
+      <path d="M9.533 11.15A1.823 1.823 0 0 0 9 12.438V15h2.578c.483 0 .947-.192 1.289-.534l7.6-7.604a1.822 1.822 0 0 0 0-2.577l-.751-.751a1.822 1.822 0 0 0-2.578 0z" />
+      <path d="M21 12c0 4.243 0 6.364-1.318 7.682C18.364 21 16.242 21 12 21c-4.243 0-6.364 0-7.682-1.318C3 18.364 3 16.242 3 12c0-4.243 0-6.364 1.318-7.682C5.636 3 7.758 3 12 3" />
+    </g>
   </svg>
 );
 
