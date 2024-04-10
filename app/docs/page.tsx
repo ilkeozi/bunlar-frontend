@@ -1,14 +1,9 @@
-import { title, subtitle } from "../../components/primitives";
-import DefaultLayout from "@/layouts/default";
-
 import { Claim } from "@/components/claim";
+import { subtitle, title } from "@/components/primitives";
 
 export default function DocsPage() {
-  const iconClasses =
-    "text-xl text-default-500 pointer-events-none flex-shrink-0";
-
   return (
-    <DefaultLayout>
+    <div>
       <section className="flex flex-col mx-auto max-w-7xl items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block  text-center justify-center">
           <h1 className={title()}>Make&nbsp;</h1>
@@ -50,6 +45,6 @@ export default function DocsPage() {
           />
         </div>
       </section>
-    </DefaultLayout>
+    </div>
   );
 }

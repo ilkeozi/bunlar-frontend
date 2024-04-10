@@ -1,25 +1,18 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "../../components/primitives";
-import { GithubIcon } from "../../components/icons";
-import DefaultLayout from "@/layouts/default";
+import { FooterList } from "@/components/footer-list";
+import { subtitle, title } from "@/components/primitives";
 import {
+  Image,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
   Divider,
-  Skeleton,
-  Image,
+  Link,
 } from "@nextui-org/react";
-import { FooterList } from "@/components/footer-list";
 
 export default function BlogPage() {
   return (
-    <DefaultLayout>
+    <div>
       <section className="flex flex-col mx-auto max-w-7xl items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block  text-center justify-center">
           <h1 className={title()}>Make&nbsp;</h1>
@@ -133,6 +126,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </DefaultLayout>
+    </div>
   );
 }
