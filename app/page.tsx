@@ -2,8 +2,6 @@ import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "../components/primitives";
-import DefaultLayout from "@/layouts/default";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { FooterList } from "@/components/footer-list";
 
 type Article = {
@@ -11,21 +9,9 @@ type Article = {
   content: string;
 };
 
-export const getStaticProps = (async (context) => {
-  const res = await fetch("https://api-test.bunlar.org/articles");
-  const staticProps = await res.json();
-  return {
-    props: {
-      staticProps,
-    },
-  };
-}) satisfies GetStaticProps<{ staticProps: Article[] }>;
-
-export default function IndexPage({
-  staticProps,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home() {
   return (
-    <DefaultLayout>
+    <div>
       <section className="container mx-auto gap-4 py-8 md:py-10 text-center">
         <div className="inline-block  text-center ">
           <h1 className={title()}>Explore&nbsp;</h1>
@@ -34,7 +20,7 @@ export default function IndexPage({
             and participate in structured discussions.
           </h1>
           <h4 className={subtitle({ class: "mt-4" })}>
-            <div key={staticProps[0].title}>Is {staticProps[0].title} </div>
+            <div>Is bıdı</div>
           </h4>
         </div>
         <div className="container mx-auto flex flex-wrap gap-4 py-8 justify-center">
@@ -105,6 +91,6 @@ export default function IndexPage({
           </div>
         </div>
       </section>
-    </DefaultLayout>
+    </div>
   );
 }
