@@ -27,7 +27,6 @@ import {
   LoginIcon,
   BunlarLogo,
 } from "./icons";
-import { LoginModal } from "./login-modal";
 import { LoginButton } from "./loginbutton";
 
 export const Navbar = () => {
