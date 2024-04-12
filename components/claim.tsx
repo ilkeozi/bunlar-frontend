@@ -1,4 +1,3 @@
-"use client";
 import {
   Avatar,
   Button,
@@ -7,20 +6,9 @@ import {
   CardFooter,
   CardHeader,
   Divider,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownSection,
-  DropdownTrigger,
   Progress,
-  cn,
 } from "@nextui-org/react";
-import {
-  AddNoteIcon,
-  CopyDocumentIcon,
-  DeleteDocumentIcon,
-  EditDocumentIcon,
-} from "./icons";
+import { ClaimMenu } from "./claim-menu";
 
 export type ClaimProps = {
   text: string;
@@ -28,9 +16,6 @@ export type ClaimProps = {
 };
 
 export const Claim = (props: ClaimProps) => {
-  const iconClasses =
-    "text-xl text-default-500 pointer-events-none flex-shrink-0";
-
   return (
     <Card>
       <CardHeader className="justify-between">
@@ -38,7 +23,7 @@ export const Claim = (props: ClaimProps) => {
           size="sm"
           radius="sm"
           classNames={{
-            base: "w-32 ",
+            base: "w-32",
             track: "drop-shadow-md border border-default",
             indicator: "bg-gradient-to-r from-pink-500 to-yellow-500",
             value: "text-foreground/60",
@@ -48,60 +33,7 @@ export const Claim = (props: ClaimProps) => {
           maxValue={10}
           showValueLabel={true}
         />
-        <Dropdown backdrop="blur">
-          <DropdownTrigger>
-            <Button variant="bordered" size="sm">
-              Open Menu
-            </Button>
-          </DropdownTrigger>
-          <DropdownMenu
-            variant="faded"
-            aria-label="Dropdown menu with description"
-          >
-            <DropdownSection title="Actions" showDivider>
-              <DropdownItem
-                key="new"
-                shortcut="⌘N"
-                description="Create a new claim"
-                startContent={<AddNoteIcon className={iconClasses} />}
-              >
-                New claim
-              </DropdownItem>
-              <DropdownItem
-                key="copy"
-                shortcut="⌘C"
-                description="Copy the claim link"
-                startContent={<CopyDocumentIcon className={iconClasses} />}
-              >
-                Copy link
-              </DropdownItem>
-              <DropdownItem
-                key="edit"
-                shortcut="⌘⇧E"
-                description="Allows you to edit the claim"
-                startContent={<EditDocumentIcon className={iconClasses} />}
-              >
-                Edit claim
-              </DropdownItem>
-            </DropdownSection>
-            <DropdownSection title="Danger zone">
-              <DropdownItem
-                key="delete"
-                className="text-danger"
-                color="danger"
-                shortcut="⌘⇧D"
-                description="Permanently delete the claim"
-                startContent={
-                  <DeleteDocumentIcon
-                    className={cn(iconClasses, "text-danger")}
-                  />
-                }
-              >
-                Delete claim
-              </DropdownItem>
-            </DropdownSection>
-          </DropdownMenu>
-        </Dropdown>
+        <ClaimMenu />
       </CardHeader>
       <Divider />
       <CardBody>

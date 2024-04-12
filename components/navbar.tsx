@@ -27,6 +27,7 @@ import {
   LoginIcon,
   BunlarLogo,
 } from "./icons";
+import { LoginButton } from "./loginbutton";
 
 export const Navbar = () => {
   const searchInput = (
@@ -95,15 +96,7 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
-          <Button
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<LoginIcon />}
-            variant="flat"
-          >
-            Login
-          </Button>
+          <LoginButton />
         </NavbarItem>
       </NavbarContent>
 
