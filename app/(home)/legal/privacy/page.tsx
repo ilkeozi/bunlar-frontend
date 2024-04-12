@@ -2,7 +2,7 @@ import fs from "fs";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Link from "next/link";
-import { subtitle, title } from "../../../components/primitives";
+import { subtitle, title } from "../../../../components/primitives";
 interface Props {
   mdxSource: MDXRemoteSerializeResult;
 }

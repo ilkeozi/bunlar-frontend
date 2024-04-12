@@ -1,8 +1,8 @@
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "../components/primitives";
 import { FooterList } from "@/components/footer-list";
+import { subtitle, title } from "@/components/primitives";
 
 type Article = {
   title: string;
