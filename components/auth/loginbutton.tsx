@@ -15,7 +15,7 @@ export const LoginButton = () => {
     );
   }
   return (
-    <>
+    <div className="flex gap-2">
       <Button
         as={Link}
         href="/auth/signin"
@@ -25,6 +25,9 @@ export const LoginButton = () => {
       >
         Login
       </Button>
-    </>
+      <Button as={Link} href="/auth/signup" color="primary">
+        Sign Up
+      </Button>
+    </div>
   );
 };
