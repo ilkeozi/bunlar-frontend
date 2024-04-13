@@ -1,4 +1,4 @@
-import { Claim } from "@/components/claim";
+import { Claim } from "@/components/claim/claim";
 import { subtitle, title } from "@/components/primitives";
 
 export default function DocsPage() {

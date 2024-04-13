@@ -14,7 +14,7 @@ import {
   CopyDocumentIcon,
   DeleteDocumentIcon,
   EditDocumentIcon,
-} from "./icons";
+} from "../icons";
 
 export const ClaimMenu = () => {
   const iconClasses =
