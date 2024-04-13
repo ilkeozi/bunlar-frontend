@@ -1,9 +1,9 @@
 import { BunlarLogo } from "@/components/icons";
 import NextLink from "next/link";
 
-import { SignInForm } from "@/components/auth/signin-form";
+import { SignUpForm } from "@/components/auth/signup-form";
 
-export default function SignInPage() {
+export default function SignUpPage() {
   return (
     <div>
       <div className="flex h-full  w-full flex-col items-center justify-center">
@@ -12,12 +12,12 @@ export default function SignInPage() {
             <BunlarLogo size={48} />
           </NextLink>
           <br />
-          <p className="text-xl font-medium">Welcome Back</p>
+          <p className="text-xl font-medium">Welcome</p>
           <p className="text-small text-default-500">
-            Log in to your account to continue
+            Create your account to get started
           </p>
         </div>
-        <SignInForm />
+        <SignUpForm />
       </div>
     </div>
   );

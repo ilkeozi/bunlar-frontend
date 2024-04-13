@@ -1,6 +1,6 @@
 "use client";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { LoginIcon } from "./icons";
+import { LoginIcon } from "../icons";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 

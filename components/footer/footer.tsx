@@ -1,4 +1,4 @@
-import { BunlarLogo } from "./icons";
+import { BunlarLogo } from "../icons";
 
 export const Footer = () => {
   return (

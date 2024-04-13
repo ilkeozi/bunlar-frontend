@@ -2,11 +2,17 @@
 import React from "react";
 import { Checkbox, Divider, Link } from "@nextui-org/react";
 
-import { GithubIcon, GoogleIcon, LockIcon, LoginIcon, MailIcon } from "./icons";
+import {
+  GithubIcon,
+  GoogleIcon,
+  LockIcon,
+  LoginIcon,
+  MailIcon,
+} from "../icons";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 
-export const LoginForm = () => {
+export const SignInForm = () => {
   return (
     <div className="mt-2 flex w-full max-w-sm flex-col gap-4 rounded-large bg-content1 px-8 py-6 shadow-small">
       <form className="flex flex-col gap-3">
@@ -47,7 +53,7 @@ export const LoginForm = () => {
       </Button>
       <p className="text-center text-small">
         Need to create an account?&nbsp;
-        <Link className="text-small" href="#">
+        <Link className="text-small" href="/auth/signup">
           Sign Up
         </Link>
       </p>
