@@ -20,7 +20,10 @@ export default function Home() {
             and participate in structured discussions.
           </h1>
           <h4 className={subtitle({ class: "mt-4" })}>
-            <div>Is bıdı</div>
+            <div>
+              Engage in deliberative discourse: Join, discuss, and dissect
+              diverse perspectives
+            </div>
           </h4>
         </div>
         <div className="container mx-auto flex flex-wrap gap-4 py-8 justify-center">
@@ -79,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8">
+      {/*  <section className="py-8">
         <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
           <div className="md:grid md:grid-cols-2 md:gap-8 ">
             <FooterList />
@@ -90,7 +93,7 @@ export default function Home() {
             <FooterList />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
