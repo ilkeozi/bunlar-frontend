@@ -1,4 +1,4 @@
-import { FooterList } from "@/components/footer-list";
+import { FooterList } from "@/components/footer/footer-list";
 import { subtitle, title } from "@/components/primitives";
 import {
   Image,
