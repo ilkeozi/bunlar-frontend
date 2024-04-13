@@ -51,11 +51,11 @@ export const SignUpForm = () => {
         <div className="flex items-center justify-between px-1 py-2">
           <Checkbox size="sm">
             I agree with the&nbsp;
-            <Link className="text-small" href="#">
+            <Link className="text-small" href="/legal/terms">
               Terms
             </Link>
             &nbsp; and
-            <Link className="text-small" href="#">
+            <Link className="text-small" href="/legal/privacy">
               &nbsp; Privacy Policy
             </Link>
           </Checkbox>
