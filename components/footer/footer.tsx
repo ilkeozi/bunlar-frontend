@@ -3,7 +3,7 @@ import { BunlarLogo } from "../icons";
 export const Footer = () => {
   return (
     <div>
-      <div className="mx-auto w-full max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 py-1 md:flex md:items-center md:justify-between lg:px-8">
         <div className="mt-4 md:order-1 md:mt-0">
           <div className="flex items-center justify-center gap-3 md:justify-start">
             <div className="flex items-center">
@@ -23,7 +23,7 @@ export const Footer = () => {
               </span>
             </div>
           </div>
-          <p className="text-left text-tiny text-default-400 md:text-start">
+          <p className="text-left text-tiny text-default-400 md:items-center">
             © 2024 Bunlar.org All rights reserved.
           </p>
         </div>

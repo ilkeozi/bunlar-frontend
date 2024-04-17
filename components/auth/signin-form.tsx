@@ -2,15 +2,10 @@
 import React from "react";
 import { Checkbox, Divider, Link } from "@nextui-org/react";
 
-import {
-  GithubIcon,
-  GoogleIcon,
-  LockIcon,
-  LoginIcon,
-  MailIcon,
-} from "../icons";
+import { GithubIcon, GoogleIcon } from "../icons";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
+import { signIn } from "next-auth/react";
 
 export const SignInForm = () => {
   return (
@@ -45,7 +40,12 @@ export const SignInForm = () => {
         <p className="text-tiny text-default-500">OR</p>
         <Divider orientation="horizontal" className="flex-1" />
       </div>
-      <Button color="default" variant="bordered" startContent={<GoogleIcon />}>
+      <Button
+        color="default"
+        variant="bordered"
+        startContent={<GoogleIcon />}
+        onClick={() => signIn("google")}
+      >
         Continue with Google
       </Button>
       <Button color="default" variant="bordered" startContent={<GithubIcon />}>
