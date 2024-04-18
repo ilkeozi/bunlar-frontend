@@ -22,6 +22,7 @@ const authOptions: NextAuthOptions = {
       clientSecret: `${process.env.COGNITO_CLIENT_SECRET}`,
       issuer: `${process.env.COGNITO_ISSUER}`,
       wellKnown: `${process.env.COGNITO_ISSUER}/.well-known/openid-configuration`,
+      checks: ["nonce"],
       authorization: {
         url: `${process.env.COGNITO_DOMAIN}/oauth2/authorize`,
         params: {
@@ -39,6 +40,7 @@ const authOptions: NextAuthOptions = {
       return params.token;
     },
     async session(params) {
+      console.log(params);
       return params.session;
     },
     async redirect({ baseUrl }) {
